@@ -1,0 +1,78 @@
+.team {
+    background-color: #f5f4fa;
+
+    &-title {
+      @include font(700, 36px, 1.1);
+      text-align: center;
+      color: var(--secondary-text-color);
+      margin-bottom: 50px;
+    }
+
+    &__title {
+      @include font(500, 16px, 1.1);
+      color: var(--secondary-text-color);
+      margin-bottom: 10px;
+    }
+
+    &__list {
+      @include center-flex;
+      width: 1170px;
+      margin: 0 auto;
+    }
+
+    &__social {
+      @include center-flex;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    &__item {
+      background-color: var(--secondary-white-color);
+      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+      border-radius: 0px 0px 4px 4px;
+    }
+
+    &__item:not(:first-child) {
+      margin-left: 30px;
+    }
+
+    &__img {
+      display: block;
+    }
+
+      &__description {
+        @include font(400, 16px, 1.1);
+    color: var(--secondary-gray-color);
+      }
+  }
+
+  .social__wrap {
+    padding: 30px 10px;
+    text-align: center;
+  }
+  
+.social__icons {
+    @include center-flex;
+    @include size(44px, 44px);
+    border-radius: 50%;
+    fill: #afb1b8;
+    transition: background-color 250ms var(--bezier);
+
+    &:hover,
+    &:focus {
+      @include center-flex;
+      @include size(44px, 44px);
+      border-radius: 50%;
+      background-color: var(--accent-color);
+      fill:var(--secondary-white-color);
+    }
+    
+  }
+
+  .social__svg {
+    width: 20px;
+    transition: fill 250ms var(--bezier);
+  }
+
+  

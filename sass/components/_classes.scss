@@ -1,0 +1,44 @@
+.classes {
+  color: var(--secondary-bcg-color);
+
+  &-title {
+    @include font(700, 36px, 1.1);
+    text-align: center;
+    color: var(--secondary-text-color);
+    margin-bottom: 50px;
+  }
+
+  &__list {
+    @include center-flex;
+    width: 1170px;
+    margin: 0 auto;
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  &__img {
+    display: block;
+  }
+
+  &__wrap {
+    @include size(370px, 70px);
+    position: absolute;
+    background: rgba(47, 48, 58, 0.8);
+    bottom: 0;
+    right: 0;
+  }
+
+  &__title {
+    @include font(700, 14px, 1.14);
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--secondary-white-color);
+    padding-top: 27px;
+  }
+}

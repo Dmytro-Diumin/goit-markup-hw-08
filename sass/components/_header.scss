@@ -1,0 +1,84 @@
+.header {
+    background-color: var(--secondary-white-color);
+    text-decoration: none;
+    border-bottom: 1px solid #ececec;
+
+    &-container {
+      max-width: 1600px;
+      @include center-flex;
+    }
+
+    &-content {
+      @include font(700, 26px, 1.1);
+      font-family: 'Raleway';
+      color: #000000;
+      text-decoration: none;
+      padding-top: 24px;
+      padding-bottom: 25px;
+      margin-right: 93px;
+    }
+
+    &-list {
+      @include center-flex;
+    }
+
+    &-link {
+      @include font(500, 14px, 1.14);
+      padding-top: 20px;
+      padding-bottom: 20px;
+      position: relative;
+      transition: color 250ms var(--bezier);
+    }
+
+    &-contact {
+      @include center-flex;
+      margin-left: auto;
+    }
+
+    &-icons {
+      margin-right: 10px;
+      transition: fill 250ms var(--bezier);
+    }
+
+    &-item:not(:first-child),
+    &-items:not(:first-child) {
+      margin-left: 50px;
+    }
+  }
+  
+  .current::after {
+    content: "";
+    @include size(100%, 4px);
+    display: block;
+    position: absolute;
+    bottom: -11px;
+    left: 0;
+    background: var(--accent-color);
+    border-radius: 2px;
+  }
+
+  .web-content {
+    color: var(--accent-color);
+  }
+
+  .contacts {
+    @include center-flex;
+    @include font(500, 14px, 1.1);
+    letter-spacing: 0.02em;
+    color: var(--secondary-gray-color);
+    fill: var(--secondary-gray-color);
+    font-style: normal;
+    text-decoration: none;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    transition: color 250ms var(--bezier);
+    &:hover,&:focus {
+    fill: var(--accent-color);}
+  }
+  
+  .contact {
+    @include font(400, 14px, 1.71);
+    color: var(--secondary-gray-color);
+    text-decoration: none;
+    transition: color 250ms var(--bezier);
+  }

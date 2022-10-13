@@ -1,0 +1,100 @@
+.footer {
+    background-color: #2f303a;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    &-container {
+      max-width: 1600px;
+      display: flex;
+      align-items: baseline;
+    }
+
+    &-content {
+      @include font(700, 26px, 1.1);
+      font-family: 'Raleway';
+      color: var(--secondary-white-color);
+      text-decoration: none;
+    }
+
+    &-items:not(:first-child) {
+      margin-top: 9px;
+    }
+
+    &-icons {
+      margin-left: 70px;
+    }
+
+    &-sign-up {
+      margin-left: 93px;
+    }
+
+    &-sign-up input {
+      @include size(358px, 50px);
+      margin-top: 20px;
+      align-items: center;
+      color:var(--secondary-white-color);
+      background-color: #2F303A;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+      border-radius: 4px;
+      padding-left: 16px;
+      cursor: pointer;
+      outline: none;
+    }
+
+    &-sign-up input:focus {
+      @include font(400, 16px, 1.25);
+      background-color:#2F303A;
+      color:var(--secondary-white-color);
+      border: 1px solid var(--accent-color);
+    }
+
+    &-sign-up input::placeholder {
+      @include font(400, 16px, 1.25);
+      @include center-flex;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    &-text {
+      @include font(500, 14px, 1.1);
+      text-transform: uppercase;
+      color: var(--secondary-white-color);
+    }
+
+    &-list {
+      display: flex;
+      gap: 10px;
+    }
+
+    &-social-icons {
+      @include center-flex;
+      @include size(44px, 44px);
+      margin-top: 20px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.1);
+      fill: var(--secondary-white-color);
+      transition: background-color 250ms var(--bezier);
+    }
+
+    &-social-icons:hover,
+    &-social-icons:focus {
+      @include center-flex;
+      @include size(44px, 44px);
+      border-radius: 50%;
+      background-color: var(--accent-color);
+      fill: var(--secondary-white-color);
+    }
+  }
+
+  .social-icons {
+    width: 20px;
+  }
+  
+  .address {
+    @include font(400, 14px, 1.7);
+    font-style: normal;
+    text-decoration: none;
+    color: var(--secondary-white-color);
+    margin-top: 20px;
+    transition: color 250ms var(--bezier);
+  }
