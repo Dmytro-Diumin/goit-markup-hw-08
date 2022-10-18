@@ -8,6 +8,10 @@
       @include center-flex;
     }
 
+    &-nav, &-items {
+      display: none;
+    }
+
     &-content {
       @include font(700, 26px, 1.1);
       font-family: 'Raleway';
@@ -26,7 +30,6 @@
       @include font(500, 14px, 1.14);
       padding-top: 20px;
       padding-bottom: 20px;
-      position: relative;
       transition: color 250ms var(--bezier);
     }
 
