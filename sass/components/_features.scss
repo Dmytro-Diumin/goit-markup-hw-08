@@ -2,21 +2,38 @@
   color: var(--secondary-bcg-color);
 
   &-list {
-    width: 1170px;
-    display: flex;
     margin: 0 auto;
+
+    @include table {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+    
+    @include desktop {
+      display: flex;
+    }
   }
 
   &-icon {
     @include center-flex;
-    @include size(270px, 120px);
+    @include size(450px, 120px);
     background-color: #f5f4fa;
     border-radius: 4px;
     margin-bottom: 30px;
+
+    @include table {
+      @include size(354px, 120px);
+    }
+
+    @include desktop {
+      @include size(270px, 120px);
+    }
   }
 
   &-title {
     @include font(700, 14px, 1.1);
+    text-align: center;
     text-transform: uppercase;
     color: var(--secondary-text-color);
     margin-bottom: 10px;
@@ -27,9 +44,23 @@
     color: var(--secondary-gray-color);
   }
 
-  &-item:not(:last-child) {
-    margin-right: 30px;
+  &-item {
+    width: 450px;
+    height: 226px;
+
+    @include table {
+      @include size(354px, 224px);
+    }
+
+    @include desktop {
+      @include size(270px, 248px);
+    }
   }
+
+
+  // &-item:not(:last-child) {
+  //   margin-right: 30px;
+  // }
 }
 
 .visually-hidden {
@@ -45,8 +76,13 @@
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @include desktop {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .clas {
