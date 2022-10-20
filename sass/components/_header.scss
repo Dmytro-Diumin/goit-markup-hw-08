@@ -4,12 +4,13 @@
     border-bottom: 1px solid #ececec;
 
     &-container {
+      width: 100%;
       max-width: 1600px;
       display: flex;
       // @include center-flex;
 
       @include table {
-        @include center-flex;
+        // @include center-flex;
       }
     }
 
@@ -55,6 +56,7 @@
       padding-top: 20px;
       padding-bottom: 20px;
       transition: color 250ms var(--bezier);
+      text-decoration: none;
     }
 
     &-contact {

@@ -1,10 +1,18 @@
 .container {
-  min-width: 320px;
-  max-width: 1230px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
+    width: 100%;
+    max-width: 480px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media screen and (min-width: 768px) {
+        max-width: 768px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        max-width: 1200px;
+    }
 }
 
 
@@ -19,10 +27,10 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  padding: 30px;
+  padding: 48px 40px;
   background-color: var(--secondary-white-color);
   transform: translateX(100%);
-  transition: transform 250ms ease-in-out;
+  transition: transform 1250ms ease-in-out;
 }
 
 .menu-container.is-open {
@@ -30,7 +38,10 @@
 }
 
 .menu-toggle {
+  position: absolute;
   @include center-flex;
+  top: 10px;
+  right: 15px;
   min-height: 40px;
   min-width: 40px;
   margin-left: auto;
@@ -44,10 +55,10 @@
 
 .menu-toggle:hover,
 .menu-toggle:focus {
-  background-color: rgba(0, 0, 0, 0.1);
+  color: var(--accent-color);
 }
 
-@media (min-width: 600px) {
+@media (min-width: 768px) {
   .menu-toggle {
     display: none;
   }
@@ -66,30 +77,62 @@
   list-style: none;
 }
 
-.mobile-menu .link {
+.mobile-menu  {
   display: block;
-  padding: 10px;
-  color: #fff;
+  margin-bottom: 302px;
+  color: var(--secondary-text-color);
   text-decoration: none;
 }
 
-.menu {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  display: flex;
+.mobile-item:not(:last-child) {
+  margin-bottom: 32px;
 }
 
-.menu .link {
-  padding: 10px;
-  color: inherit;
-  text-decoration: none;
+.mobile-link {
+  @include font (500, 40px, 1.17);
 }
 
-.menu .link:hover,
-.menu .link:focus {
-  text-decoration: underline;
+.mobile-contact {
+  margin-bottom: 64px;
 }
+
+.mobile-items:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mobile-contacts {
+  @include font (500, 34px, 1.17);
+  color: var(--accent-color);
+}
+
+.mobile-mail {
+  @include font (500, 24px, 1.16);
+  color: var(--secondary-gray-color);
+}
+
+
+
+.mobile-social {
+  @include center-flex;
+}
+
+.mobile-list:not(:last-child) {
+  margin-right: 10px;
+}
+
+.mob-social {
+  @include font (500, 18px, 1.22);
+  color: var(--accent-color);
+}
+
+.mobile-list:not(:last-child)::after {
+  content: "";
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+  transform: rotate(90deg);
+  
+  
+}
+
 
 @media (max-width: 599px) {
   .menu {

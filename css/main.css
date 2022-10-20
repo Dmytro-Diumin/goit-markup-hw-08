@@ -231,23 +231,11 @@ body {
   border-bottom: 1px solid #ececec;
 }
 .header-container {
+  width: 100%;
   max-width: 1600px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-@media screen and (min-width: 768px) {
-  .header-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
 }
 .header-content {
   font-weight: 700;
@@ -314,6 +302,7 @@ body {
   padding-bottom: 20px;
   -webkit-transition: color 250ms var(--bezier);
   transition: color 250ms var(--bezier);
+  text-decoration: none;
 }
 .header-contact {
   display: none;
@@ -451,12 +440,22 @@ body {
 }
 
 .container {
-  min-width: 320px;
-  max-width: 1230px;
+  width: 100%;
+  max-width: 480px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
 }
 
 .header .container {
@@ -474,14 +473,14 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
-  padding: 30px;
+  padding: 48px 40px;
   background-color: var(--secondary-white-color);
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
-  -webkit-transition: -webkit-transform 250ms ease-in-out;
-  transition: -webkit-transform 250ms ease-in-out;
-  transition: transform 250ms ease-in-out;
-  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+  -webkit-transition: -webkit-transform 1250ms ease-in-out;
+  transition: -webkit-transform 1250ms ease-in-out;
+  transition: transform 1250ms ease-in-out;
+  transition: transform 1250ms ease-in-out, -webkit-transform 1250ms ease-in-out;
 }
 
 .menu-container.is-open {
@@ -490,6 +489,7 @@ body {
 }
 
 .menu-toggle {
+  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -499,6 +499,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  top: 10px;
+  right: 15px;
   min-height: 40px;
   min-width: 40px;
   margin-left: auto;
@@ -512,10 +514,10 @@ body {
 
 .menu-toggle:hover,
 .menu-toggle:focus {
-  background-color: rgba(0, 0, 0, 0.1);
+  color: var(--accent-color);
 }
 
-@media (min-width: 600px) {
+@media (min-width: 768px) {
   .menu-toggle {
     display: none;
   }
@@ -533,31 +535,73 @@ body {
   list-style: none;
 }
 
-.mobile-menu .link {
+.mobile-menu {
   display: block;
-  padding: 10px;
-  color: #fff;
+  margin-bottom: 302px;
+  color: var(--secondary-text-color);
   text-decoration: none;
 }
 
-.menu {
-  padding: 0;
-  margin: 0;
-  list-style: none;
+.mobile-item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mobile-link {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.17;
+}
+
+.mobile-contact {
+  margin-bottom: 64px;
+}
+
+.mobile-items:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mobile-contacts {
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.17;
+  color: var(--accent-color);
+}
+
+.mobile-mail {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.16;
+  color: var(--secondary-gray-color);
+}
+
+.mobile-social {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.menu .link {
-  padding: 10px;
-  color: inherit;
-  text-decoration: none;
+.mobile-list:not(:last-child) {
+  margin-right: 10px;
 }
 
-.menu .link:hover,
-.menu .link:focus {
-  text-decoration: underline;
+.mob-social {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  color: var(--accent-color);
+}
+
+.mobile-list:not(:last-child)::after {
+  content: "";
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 
 @media (max-width: 599px) {
