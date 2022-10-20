@@ -1,15 +1,29 @@
 .footer {
+    width: 480px;
     background-color: #2f303a;
     padding-top: 60px;
     padding-bottom: 60px;
 
-    &-container {
-      max-width: 1600px;
+    @include desktop {
+      width: 1600px;
       display: flex;
-      align-items: baseline;
+      // align-items: baseline;
+    }
+
+    &-container {
+      // max-width: 1600px;
+      // display: flex;
+      // align-items: baseline;
+
+      @include desktop {
+        max-width: 1600px;
+        display: flex;
+        align-items: baseline;
+      }
     }
 
     &-content {
+      // @include center-flex;
       @include font(700, 26px, 1.1);
       font-family: 'Raleway';
       color: var(--secondary-white-color);
@@ -91,6 +105,7 @@
   }
   
   .address {
+    // @include center-flex;
     @include font(400, 14px, 1.7);
     font-style: normal;
     text-decoration: none;

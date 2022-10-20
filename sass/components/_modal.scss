@@ -11,7 +11,7 @@
   
   .modal {
     @include font(400, 12px, 1.16);
-    @include size(528px, 581px);
+    @include size(450px, 609px);
     letter-spacing: 0.01em;
     position: absolute;
     padding: 40px;
@@ -22,10 +22,18 @@
     border-radius: 4px;
     transform: translate(-50%, -50%)scale(1);
 
+    @include desktop {
+      @include size(528px, 581px);
+    }
+
     &-title {
-      @include font(700, 20px, 1.15);
+      @include font(700, 20px, 1.5);
       text-align: center;
       color: var(--secondary-text-color);
+
+      @include desktop {
+        @include font(700, 20px, 1.15);
+      }
     }
   }
   
@@ -60,7 +68,7 @@
     }
 
     & textarea {
-      @include size(448px, 120px);
+      @include size(auto, 120px);
       border: 1px solid rgba(33, 33, 33, 0.2);
       border-radius: 4px;
       padding: 12px 16px;
@@ -71,9 +79,13 @@
     }
 
     & textarea::placeholder {
-      @include font(400, 12px, 1.16);
+      @include font(400, 14px, 1.14);
       letter-spacing: 0.01em;
       color: rgba(117, 117, 117, 0.5);
+
+      @include desktop {
+        @include font(400, 12px, 1.16);
+      }
     }
 
     & textarea:focus {
@@ -103,9 +115,13 @@
     }
 
     & label {
-      @include font(400, 14px, 1.71);
+      @include font(400, 12px, 1.16);
       color: var(--secondary-gray-color);
       cursor: pointer;
+
+      @include desktop {
+        @include font(400, 14px, 1.71);
+      }
     }
   }
   
@@ -115,6 +131,7 @@
     border-radius: 3px;
     border: 2px solid var(--secondary-text-color);
     margin-right: 7px;
+    cursor: pointer;
     transition: background-color 250ms var(--bezier), border 250ms var(--bezier);
   }
   

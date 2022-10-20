@@ -8,7 +8,16 @@
 
   &-list {
     @include center-flex;
+    flex-wrap: wrap;
     gap: 30px;
+    // @include center-flex;
+    // gap: 30px;
+
+    @include desktop {
+      @include center-flex;
+      flex-wrap: nowrap;
+      gap: 30px;
+    }
   }
 
   &-icon {

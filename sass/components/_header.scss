@@ -5,28 +5,52 @@
 
     &-container {
       max-width: 1600px;
-      @include center-flex;
+      display: flex;
+      // @include center-flex;
+
+      @include table {
+        @include center-flex;
+      }
     }
 
-    &-nav, &-items {
-      display: none;
-    }
 
     &-content {
-      @include font(700, 26px, 1.1);
+      @include font(700, 24px, 1.16);
       font-family: 'Raleway';
       color: #000000;
       text-decoration: none;
-      padding-top: 24px;
-      padding-bottom: 25px;
-      margin-right: 93px;
+      padding-top: 16px;
+      padding-bottom: 16px;
+      
+
+      @include table {
+        margin-right: 87px;
+        padding-top: 26px;
+        padding-bottom: 26px;
+      }
+
+      @include desktop {
+        @include font(700, 26px, 1.19);
+        margin-right: 93px;
+        padding-top: 24px;
+        padding-bottom: 25px;
+      }
     }
 
     &-list {
-      @include center-flex;
+      display: none;
+
+      @include table {
+        @include center-flex;
+      }
+
+      @include desktop {
+        @include center-flex;
+      }
     }
 
     &-link {
+      position: relative;
       @include font(500, 14px, 1.14);
       padding-top: 20px;
       padding-bottom: 20px;
@@ -34,19 +58,60 @@
     }
 
     &-contact {
-      @include center-flex;
-      margin-left: auto;
+      
+      display: none;
+
+      @include table {
+        // @include center-flex;
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        margin-left: auto;
+        padding-top: 21px;
+        padding-bottom: 21px;
+
+      }
+
+      @include desktop {
+        @include center-flex;
+        flex-direction: row;
+        align-items: center;
+        margin-left: auto;
+        gap: 30px;
+        padding-top: 0;
+        padding-bottom: 0;
+      }
     }
 
     &-icons {
       margin-right: 10px;
       transition: fill 250ms var(--bezier);
+
+      @include table {
+        width: 14px;
+      }
+
+      @include desktop {
+        width: 16px;
+      }
     }
 
-    &-item:not(:first-child),
-    &-items:not(:first-child) {
+    &-item:not(:first-child) {
       margin-left: 50px;
     }
+
+    &-items:not(:last-child) {
+      
+      @include table {
+        margin-bottom: 10px;
+      }
+
+      @include desktop {
+        margin-bottom: 0;
+      }
+    }
+
+    
   }
   
   .current::after {
@@ -54,7 +119,7 @@
     @include size(100%, 4px);
     display: block;
     position: absolute;
-    bottom: -11px;
+    bottom: -12px;
     left: 0;
     background: var(--accent-color);
     border-radius: 2px;
@@ -66,20 +131,28 @@
 
   .contacts {
     @include center-flex;
-    @include font(500, 14px, 1.1);
     letter-spacing: 0.02em;
     color: var(--secondary-gray-color);
     fill: var(--secondary-gray-color);
-    font-style: normal;
     text-decoration: none;
-    padding-top: 20px;
-    padding-bottom: 20px;
     transition: color 250ms var(--bezier);
     &:hover,&:focus {
     fill: var(--accent-color);}
+
+    @include table {
+      @include font(500, 12px, 1.16);
+      margin-left: auto;
+    }
+
+    @include desktop {
+      @include font(500, 14px, 1.14);
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
   }
   
   .contact {
+    // @include center-flex;
     @include font(400, 14px, 1.71);
     color: var(--secondary-gray-color);
     text-decoration: none;

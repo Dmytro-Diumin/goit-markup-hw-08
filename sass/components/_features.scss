@@ -12,6 +12,7 @@
     
     @include desktop {
       display: flex;
+      flex-wrap: nowrap;
     }
   }
 
@@ -32,11 +33,15 @@
   }
 
   &-title {
-    @include font(700, 14px, 1.1);
+    @include font(700, 14px, 1.14);
     text-align: center;
     text-transform: uppercase;
     color: var(--secondary-text-color);
     margin-bottom: 10px;
+
+    @include table {
+      text-align: left;
+    }
   }
 
   &-text {
