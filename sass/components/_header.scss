@@ -16,6 +16,7 @@
 
 
     &-content {
+      display: inline-block;
       @include font(700, 24px, 1.16);
       font-family: 'Raleway';
       color: #000000;
