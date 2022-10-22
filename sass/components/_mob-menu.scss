@@ -1,7 +1,6 @@
 .menu-container {
   position: fixed;
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
   justify-content: space-between;
   top: 0;
@@ -94,6 +93,7 @@
 
 .mobile-social {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .mobile-list {
