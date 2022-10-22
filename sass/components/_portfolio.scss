@@ -1,9 +1,19 @@
 .work {
   &-list {
-    @include center-flex;
-    max-width: 1230px;
-    flex-wrap: wrap;
-    margin: 0 auto;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include table {
+      max-width: 768px;
+    }
+
+    @include desktop {
+      @include center-flex;
+      max-width: 1230px;
+      flex-wrap: wrap;
+      margin: 0 auto;
+    }
   }
 
   &-title {
@@ -15,7 +25,11 @@
 
     &-item {
       margin: 0 auto;
-      margin-bottom: 30px; 
+      margin-bottom: 30px;
+
+      @include table {
+        max-width: 768px;
+      }
     }
 
     &-shadow:hover,
@@ -26,6 +40,7 @@
     &-wrap {
       position: relative;
       overflow: hidden;
+      
     }
 
     &-text {
@@ -62,6 +77,8 @@
     border-left: 1px solid #eeeeee;
     border-right: 1px solid #eeeeee;
     padding: 20px 24px;
+
+    
   }
   
   .proj {
