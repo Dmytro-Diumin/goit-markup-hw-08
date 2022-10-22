@@ -44,16 +44,28 @@
     margin: 0 auto;
 
     &-list {
-      @include center-flex;
-      width: 575px;
+      // @include center-flex;
+      display: flex;
+      flex-wrap: wrap;
+      @include size (326px, 91px);
       color: var(--secondary-bcg-color);
       list-style: none;
       margin: 0 auto;
       margin-bottom: 50px;
+
+      @include table {
+        @include center-flex;
+        flex-wrap: nowrap;
+        @include size (575px, 54px);
+      }
     }
 
     &-item {
-      margin: 0 auto;
+      
+
+      @include table {
+        margin: 0 auto;
+      }
     }
 
     &-item:not(:last-child) {
