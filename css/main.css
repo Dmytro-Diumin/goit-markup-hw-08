@@ -583,7 +583,7 @@ body {
 
 .hero-title {
   width: 100%;
-  max-width: 480px;
+  max-width: 1600px;
   padding-top: 118px;
   padding-bottom: 118px;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/герой/hero-background-480.jpg");
@@ -602,7 +602,6 @@ body {
 }
 @media screen and (min-width: 768px) {
   .hero-title {
-    max-width: 768px;
     padding-top: 118px;
     padding-bottom: 118px;
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/герой/hero-background-768.jpg");
@@ -617,7 +616,6 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .hero-title {
-    max-width: 1600px;
     padding-top: 200px;
     padding-bottom: 200px;
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/герой/hero-background-1600.jpg");
