@@ -1,17 +1,20 @@
 .work {
   &-list {
+    display: flex;
+    flex-direction: column;
     max-width: 480px;
     margin-left: auto;
     margin-right: auto;
 
     @include table {
       max-width: 768px;
+      flex-wrap: wrap;
+      flex-direction: row;
     }
 
     @include desktop {
       @include center-flex;
       max-width: 1230px;
-      flex-wrap: wrap;
       margin: 0 auto;
     }
   }
@@ -29,6 +32,10 @@
 
       @include table {
         max-width: 768px;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-around;
+        flex-direction: column;
       }
     }
 
@@ -59,6 +66,7 @@
  
   .portfolio {
     display: block;
+    align-items: stretch;
     text-decoration: none;
     transition: box-shadow 250ms var(--bezier);
 
@@ -73,6 +81,7 @@
   }
   
   .projects {
+    display: block;
     border-bottom: 1px solid #eeeeee;
     border-left: 1px solid #eeeeee;
     border-right: 1px solid #eeeeee;
