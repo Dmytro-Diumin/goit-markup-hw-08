@@ -22,11 +22,20 @@
 
   &-icon {
     @include center-flex;
-    @include size(170px, 92px);
+    @include size(210px, 92px);
     border: 1px solid #afb1b8;
     border-radius: 4px;
     fill: #afb1b8;
     transition: border 250ms var(--bezier);
+
+    @include table {
+      @include size(226px, 92px);
+    }
+
+    @include desktop {
+      @include size(170px, 92px);
+
+    }
   }
 
   &-icons {

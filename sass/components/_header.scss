@@ -2,19 +2,17 @@
     background-color: var(--secondary-white-color);
     text-decoration: none;
     border-bottom: 1px solid #ececec;
+    
 
     &-container {
-      width: 100%;
-      max-width: 1600px;
       display: flex;
-      // @include center-flex;
+      align-items: center;
 
-      @include table {
-        // @include center-flex;
-      }
+      @media screen and (max-width: 767px) {
+        justify-content: space-between;
+        }
     }
-
-
+    
     &-content {
       display: inline-block;
       @include font(700, 24px, 1.16);

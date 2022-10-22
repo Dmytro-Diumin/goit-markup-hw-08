@@ -5,6 +5,7 @@
     margin: 0 auto;
 
     @include table {
+      max-width: 768px;
       display: flex;
       flex-wrap: wrap;
       gap: 30px;
@@ -18,17 +19,20 @@
 
   &-icon {
     @include center-flex;
-    @include size(450px, 120px);
+    
+    
     background-color: #f5f4fa;
     border-radius: 4px;
+    padding-top: 25px;
+    padding-bottom: 25px;
     margin-bottom: 30px;
 
-    @include table {
-      @include size(354px, 120px);
+    @media screen and (min-width: 768px) {
+      max-width: 354px;
     }
 
-    @include desktop {
-      @include size(270px, 120px);
+    @media screen and (min-width: 1200px) {
+      max-width: 270px;
     }
   }
 
@@ -50,17 +54,23 @@
   }
 
   &-item {
-    width: 450px;
-    height: 226px;
-
-    @include table {
-      @include size(354px, 224px);
-    }
-
-    @include desktop {
-      @include size(270px, 248px);
+    
+    @media screen and (min-width: 768px) {
+      width: 100%;
+      max-width: 354px;
     }
   }
+  
+
+  &-item:not(:last-child) {
+    margin-bottom: 30px;
+    
+    @media screen and (min-width: 768px) {
+      margin-bottom: 0;
+    }
+  }
+
+  
 
 
   // &-item:not(:last-child) {
@@ -92,4 +102,8 @@
 
 .clas {
   padding-bottom: 0;
+
+  @include table {
+    padding-bottom: 60px;
+  }
 }
