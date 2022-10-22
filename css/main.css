@@ -457,11 +457,23 @@ body {
 
 .menu-container {
   position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  padding: 48px 40px;
+  padding: 40px 0 48px 48px;
   background-color: var(--secondary-white-color);
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
@@ -514,14 +526,20 @@ body {
 }
 
 .mobile-menu {
-  display: block;
-  margin-bottom: 302px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   color: var(--secondary-text-color);
   text-decoration: none;
-}
-
-.mobile-item:not(:last-child) {
-  margin-bottom: 32px;
+  gap: 35px;
+  margin-bottom: auto;
 }
 
 .mobile-link {
@@ -531,11 +549,15 @@ body {
 }
 
 .mobile-contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-bottom: 64px;
-}
-
-.mobile-items:not(:last-child) {
-  margin-bottom: 32px;
+  gap: 35px;
 }
 
 .mobile-contacts {
