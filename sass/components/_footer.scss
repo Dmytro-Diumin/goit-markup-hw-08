@@ -5,17 +5,27 @@
     padding-bottom: 60px;
 
       @media screen and (min-width: 1200px) {
-        max-width: 1600px;
+      max-width: 1600px;
       display: flex;
       align-items: baseline;
     }
 
     &-container {
-      text-align: center
+      text-align: center;
+
+      @include table {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+      }
     }
 
     &-contact {
       margin-bottom: 60px;
+
+      @include table {
+        margin-left: 76px;
+      }
     }
 
     &-content {
@@ -34,7 +44,12 @@
       // margin-left: 70px;
       margin-bottom: 60px;
 
-      @media screen and (min-width: 1200px) {
+      @include table {
+        margin-left: 165px;
+        margin-right: auto;
+      }
+
+      @include desktop {
         margin-left: 70px;
     }
     }
@@ -42,8 +57,9 @@
     &-sign-up {
       // margin-left: 93px;
 
-      @media screen and (min-width: 1200px) {
-        margin-left: 93px;
+      @include table {
+        margin-left: auto;
+        margin-right: auto;
       }
     }
 

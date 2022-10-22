@@ -234,13 +234,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-@media screen and (max-width: 767px) {
-  .header-container {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
+  position: relative;
 }
 .header-content {
   display: inline-block;
@@ -449,7 +443,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   padding: 48px 40px;
   background-color: var(--secondary-white-color);
@@ -494,9 +488,6 @@ body {
   }
 }
 .menu-container .menu-toggle {
-  position: absolute;
-  top: 20px;
-  right: 15px;
   color: var(--secondary-text-color);
 }
 
@@ -653,7 +644,6 @@ body {
 }
 @media screen and (min-width: 768px) {
   .features-list {
-    max-width: 768px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -664,9 +654,6 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .features-list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
   }
@@ -731,6 +718,11 @@ body {
     margin-bottom: 0;
   }
 }
+@media screen and (min-width: 1200px) {
+  .features-item:not(:last-child) {
+    margin-bottom: 0;
+  }
+}
 
 .visually-hidden {
   width: 1px;
@@ -757,12 +749,9 @@ body {
   }
 }
 
-.clas {
-  padding-bottom: 0;
-}
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .clas {
-    padding-bottom: 60px;
+    padding-bottom: 0;
   }
 }
 
@@ -1067,8 +1056,25 @@ body {
 .footer-container {
   text-align: center;
 }
+@media screen and (min-width: 768px) {
+  .footer-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+}
 .footer-contact {
   margin-bottom: 60px;
+}
+@media screen and (min-width: 768px) {
+  .footer-contact {
+    margin-left: 76px;
+  }
 }
 .footer-content {
   font-weight: 700;
@@ -1084,14 +1090,21 @@ body {
 .footer-icons {
   margin-bottom: 60px;
 }
+@media screen and (min-width: 768px) {
+  .footer-icons {
+    margin-left: 165px;
+    margin-right: auto;
+  }
+}
 @media screen and (min-width: 1200px) {
   .footer-icons {
     margin-left: 70px;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .footer-sign-up {
-    margin-left: 93px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 .footer-sign-up input {

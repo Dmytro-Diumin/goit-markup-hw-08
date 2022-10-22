@@ -5,15 +5,13 @@
     margin: 0 auto;
 
     @include table {
-      max-width: 768px;
       display: flex;
       flex-wrap: wrap;
       gap: 30px;
     }
     
     @include desktop {
-      display: flex;
-      flex-wrap: nowrap;
+      flex-wrap: nowrap; 
     }
   }
 
@@ -68,6 +66,10 @@
     @media screen and (min-width: 768px) {
       margin-bottom: 0;
     }
+
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 0;
+    }
   }
 
   
@@ -101,9 +103,8 @@
 }
 
 .clas {
-  padding-bottom: 0;
 
-  @include table {
-    padding-bottom: 60px;
+  @include desktop {
+    padding-bottom: 0;
   }
 }
