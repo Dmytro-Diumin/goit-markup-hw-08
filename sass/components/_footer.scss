@@ -18,6 +18,10 @@
         flex-wrap: wrap;
         align-items: baseline;
       }
+
+      @include desktop {
+        text-align: left;
+      }
     }
 
     &-contact {
@@ -25,6 +29,11 @@
 
       @include table {
         margin-left: 76px;
+      }
+
+      @include desktop {
+        margin-bottom: 0;
+        margin-left: 0;
       }
     }
 

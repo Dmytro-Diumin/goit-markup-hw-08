@@ -1104,12 +1104,23 @@ body {
             align-items: baseline;
   }
 }
+@media screen and (min-width: 1200px) {
+  .footer-container {
+    text-align: left;
+  }
+}
 .footer-contact {
   margin-bottom: 60px;
 }
 @media screen and (min-width: 768px) {
   .footer-contact {
     margin-left: 76px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer-contact {
+    margin-bottom: 0;
+    margin-left: 0;
   }
 }
 .footer-content {
@@ -1445,8 +1456,9 @@ body {
   font-weight: 400;
   font-size: 12px;
   line-height: 1.16;
-  width: 450px;
+  width: 100vw;
   height: 609px;
+  max-width: 450px;
   letter-spacing: 0.01em;
   position: absolute;
   padding: 40px;
