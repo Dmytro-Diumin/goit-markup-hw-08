@@ -128,7 +128,7 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 326px;
+  max-width: 326px;
   height: 91px;
   color: var(--secondary-bcg-color);
   list-style: none;
@@ -148,7 +148,7 @@ body {
             align-items: center;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
-    width: 575px;
+    max-width: 575px;
     height: 54px;
   }
 }
@@ -1326,6 +1326,7 @@ body {
   max-width: 480px;
   margin-left: auto;
   margin-right: auto;
+  gap: 30px;
 }
 @media screen and (min-width: 768px) {
   .work-list {
@@ -1360,10 +1361,10 @@ body {
   letter-spacing: 0.06em;
   color: var(--secondary-text-color);
   margin-bottom: 4px;
+  margin-left: 24px;
 }
 .work-item {
   margin: 0 auto;
-  margin-bottom: 30px;
 }
 @media screen and (min-width: 768px) {
   .work-item {
@@ -1408,6 +1409,14 @@ body {
   transition: transform 250ms var(--bezier), -webkit-transform 250ms var(--bezier);
 }
 
+.text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.87;
+  margin-left: 24px;
+  color: var(--secondary-gray-color);
+}
+
 .portfolio {
   display: block;
   -webkit-box-align: stretch;
@@ -1426,6 +1435,7 @@ body {
 
 .project {
   display: block;
+  width: 100%;
 }
 
 .projects {
@@ -1433,11 +1443,11 @@ body {
   border-bottom: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
-  padding: 20px 24px;
+  padding: 20px 0px;
 }
 
 .proj {
-  margin-bottom: 0;
+  margin-left: 0;
 }
 
 .backdrop {
