@@ -113,6 +113,9 @@
   }
   
   .current::after {
+    display: none;
+
+    @include table {
     content: "";
     @include size(100%, 4px);
     display: block;
@@ -121,6 +124,7 @@
     left: 0;
     background: var(--accent-color);
     border-radius: 2px;
+  }
   }
 
   .web-content {
