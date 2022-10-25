@@ -49,7 +49,7 @@
       flex-wrap: wrap;
       // @include size (326px, 91px);
       max-width: 326px;
-      height: 91px;
+      gap: 16px 8px;
       color: var(--secondary-bcg-color);
       list-style: none;
       margin: 0 auto;
@@ -72,9 +72,9 @@
       }
     }
 
-    &-item:not(:last-child) {
-      margin-right: 8px;
-    }
+    // &-item:not(:last-child) {
+    //   margin-right: 8px;
+    // }
 
   }
   

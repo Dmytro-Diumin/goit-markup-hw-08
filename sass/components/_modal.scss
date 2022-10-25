@@ -108,8 +108,14 @@
   }
   
   .accept-wrap {
-    @include center-flex;
+    // @include center-flex;
+    display: flex;
+    align-items: center;
     margin-top: 20px;
+
+    @include desktop {
+      @include center-flex;
+    }
 
     & input:checked + .checkbox {
       background-color: var(--accent-color);
