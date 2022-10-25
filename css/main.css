@@ -473,7 +473,7 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
-  padding: 40px 0 48px 48px;
+  padding: 40px 48px;
   background-color: var(--secondary-white-color);
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
@@ -500,13 +500,7 @@ body {
   outline: none;
 }
 
-.menu-toggle:hover,
-.menu-toggle:focus {
-  color: var(--accent-color);
-}
-
-.menu-toggle-close:hover,
-.menu-toggle-close:focus {
+.menu-toggle:focus, .menu-toggle-close:focus {
   color: var(--accent-color);
 }
 
